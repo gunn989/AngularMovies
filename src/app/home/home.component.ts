@@ -1,15 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
-import { map } from 'rxjs/operators';
-
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class AppComponent {
+export class HomeComponent implements OnInit {
+
   title = 'my website';
 
   private movieUrl = 'https://api.themoviedb.org/3/movie/now_playing?api_key=39c71b288a0baedda68e1940108ed8f3&language=en-US&page=1';
@@ -17,13 +15,11 @@ export class AppComponent {
 
   dataMovie: any = {};
   dataTv: any = {};
-  public show:boolean = false;
+ 
 
   ngOnInit () {}
 
-  toggle() {
-    this.show = !this.show;
-  }
+
 
   constructor(private http : HttpClient){
     this.getMovie();
@@ -52,6 +48,4 @@ export class AppComponent {
       this.dataTv = data;
     })
   }
-  
 }
-
