@@ -12,8 +12,8 @@ import { map } from 'rxjs/operators';
 export class AppComponent {
   title = 'my website';
 
-  private movieUrl = 'https://api.themoviedb.org/3/movie/now_playing?api_key=39c71b288a0baedda68e1940108ed8f3&language=en-US&page=1';
-  private tvUrl = 'https://api.themoviedb.org/3/tv/popular?api_key=39c71b288a0baedda68e1940108ed8f3&language=en-US&page=1';
+  private movieUrl = 'https://api.themoviedb.org/3/movie/now_playing?api_key=&language=en-US&page=1';
+  private tvUrl = 'https://api.themoviedb.org/3/tv/popular?api_key=language=en-US&page=1';
 
   dataMovie: any = {};
   dataTv: any = {};
